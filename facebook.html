@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Create Account</title>
+    <link rel="stylesheet" href="E:/Html Demo/Bootstrap/bootstrap-4.5.2/bootstrap-4.5.2/dist/css/bootstrap.min.css">">
+    <style>
+        h1,h5{
+            margin-left: 100px;
+        }
+        h6{
+            padding-top: 20px;
+            margin-left: 900px;
+        }
+        small{
+            margin-left: 150px;
+            font-size: 40px;
+        }
+        input[type="email"]{
+            margin-left: 550px;
+            padding: 10px;
+        }
+        input[type="password"]{
+            margin-left: 20px;
+            padding: 10px;
+        }
+        #button1{
+            margin-left: 18px;
+            padding: 10px;
+        }
+        a{
+            margin-left: 1090px;
+            color: white;
+        }
+        img{
+            margin-left: 100px;
+            margin-top: 100px;
+            width: 400px;
+            height: 300px;
+        }
+        #firstname,input[type="radio"],#dob1{
+            margin-left: 100px;
+        }
+        input[type="text"]{
+            width: 250px;
+        }
+        #emailphn,#password1{
+            margin-left: 100px;
+            width: 500px;
+        }
+        p{
+            margin-left: 100px;
+            margin-right: 170px;
+            font-size: 12px;
+        }
+        #button2{
+            margin-left: 100px;
+            width: 200px;
+            height: 50px;
+            background-color: rgb(83, 185, 83);
+            border: none;
+            border-radius: 10px;
+        }
+        #err1,#err3,#err4{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container-stretch">
+            <div class="row-5 bg-primary text-light">
+                <h6>Email or Phone
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Passowrd
+                </h6>
+                <small>facebook</small>
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="email" name="email">
+                    <input type="password" name="password">
+                    <input type="submit" id="button1" value="Log In">
+                </form>
+                <a href="#">Forgotten account?</a>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+              <img src="facebook.jfif" alt="facebook image">
+            </div>
+
+            <div class="col-sm-6">
+                <br>
+                <h1>Create an account</h1>
+                <h5>It's free and always will be</h5>
+                <form name="createAccount" onsubmit="return validation();">
+                <input type="text" id="firstname" name="Firstname" placeholder="First name">
+                <input type="text" id="surname" name="Surname" placeholder="Surname"><br>
+
+                <div>
+                    <div style="width:50%;Text-align:left;float:left;">
+                        <span id="err1" style="display:none;color:sienna">Firstname should not be empty</span></div>
+                    <div style="Text-align:left;Width:50%;float:right">
+                        <span id="err2" style="display:none;color:sienna">Surname should not be empty</span><br></div>
+                </div>
+
+                <input type="email" id="emailphn" name="email" placeholder="Mobile number or email address"><br>
+                <span id="err3" style="display:none;color:sienna">Email should not be empty</span><br>
+                <input type="password" id="password1" name="password" placeholder="New password" ><br>
+                <span id="err4" style="display:none;color:sienna">Password should not be empty</span>
+                <br><h5>Birthday</h5>
+                
+                <select name="dob" id="dob1">
+                    <option value="" disabled selected>Day</option>
+                    <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">3</option>
+                    <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
+                    <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
+                    <option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
+                    <option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
+                    <option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>
+                    <option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option>
+                    <option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                </select>
+                <select name="dob" id="dob2">
+                    <option value="" disabled selected>Month</option>
+                    <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option>
+                    <option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option>
+                    <option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select name="dob" id="dob3">
+                    <option value="" disabled selected>Year</option>
+                    <option value="1">2020</option><option value="2">2019</option><option value="3">2018</option><option value="4">2017</option>
+                    <option value="5">2016</option><option value="6">2015</option><option value="7">2014</option><option value="8">2013</option>
+                    <option value="9">2012</option><option value="10">2011</option><option value="11">2010</option><option value="12">2009</option>
+                    <option value="13">2008</option><option value="14">2007</option><option value="15">2006</option><option value="16">2005</option>
+                    <option value="17">2004</option><option value="18">2003</option><option value="19">2002</option><option value="20">2002</option>
+                    <option value="21">2001</option><option value="22">2000</option><option value="23">1999</option><option value="24">1998</option>
+                    <option value="25">1997</option><option value="26">1996</option><option value="27">1995</option><option value="28">1994</option>
+                    <option value="29">1993</option><option value="30">1992</option><option value="31">1991</option><option value="32">1990</option>
+                    <option value="33">1989</option><option value="34">1988</option><option value="35">1987</option><option value="36">1986</option>
+                    <option value="37">1985</option><option value="38">1984</option><option value="39">1983</option><option value="40">1982</option>
+                    <option value="41">1981</option><option value="42">1980</option><option value="43">1979</option><option value="44">1978</option>
+                    <option value="45">1977</option><option value="46">1976</option><option value="47">1975</option><option value="48">1974</option>
+                    <option value="49">1973</option><option value="50">1972</option><option value="51">1971</option><option value="52">1970</option>
+                    <option value="53">1969</option><option value="54">1968</option><option value="55">1967</option><option value="56">1966</option>
+                    <option value="57">1965</option><option value="58">1964</option><option value="59">1963</option><option value="60">1962</option>
+                </select>
+                <br><br>
+                <input type="radio" id="male" name="gender" value="male">Male
+                <input type="radio" id="female" name="gender" value="female">Female
+                <br><br>
+                <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy.
+                    You may receive SMS notifications from us and can opt out at any time
+                </p>
+                <button id="button2">Create an account</button>
+            </form>
+            </div>
+      </div>
+    </form>
+    <script src="/facebook.js"></script>
+</body>
+</html>
